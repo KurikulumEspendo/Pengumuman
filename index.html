@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Kelulusan SMP Negeri 1 Doro TP 2025/2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        /* Kop Surat Sekolah */
+        .kop-surat {
+            display: flex;
+            align-items: center;
+            border-bottom: 4px double #000;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .kop-logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .kop-teks {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .kop-teks h1 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+            letter-spacing: 0.5px;
+        }
+        .kop-teks h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+        .kop-teks h3 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+        .kop-teks p {
+            font-size: 12px;
+            margin: 0;
+            font-style: italic;
+        }
+        /* Konten Utama */
+        .judul-halaman {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .form-akses {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-akses label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-akses input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .form-akses button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.2s;
+        }
+        .form-akses button:hover {
+            background-color: #004085;
+        }
+        /* Hasil Pengumuman */
+        .Hasil-box {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .tabel-data {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .tabel-data td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 16px;
+        }
+        .tabel-data td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #495057;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .status-lulus {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status-tidak {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .error-pesan {
+            color: #721c24;
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+            margin-top: 15px;
+        }
+        .tanggal-ttd {
+            text-align: right;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="kop-surat">
+        <img class="kop-logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm0AIpuk-McWq87l9Ww-N0javHCjY9XVKg3IksMdF1mSs64D_lu0zs5NJmqNvAl77gTCNJHPeGOxtE9hXCTfNLXE9LVSKM4IKuU9JvGfqY9rfWlJ_A37kYnQwlSknao9jphCoFjJI_FPhNtkcd3j-QiXP-KSgcFEo9N1bohKcd-UsBmoA/s1600/logo%20SMP.jpg" alt="Logo SMP Negeri 1 Doro">
+        <div class="kop-teks">
+            <h1>Pemerintah Kabupaten Pekalongan</h1>
+            <h2>Dinas Pendidikan dan Kebudayaan</h2>
+            <h3>SMP Negeri 1 Doro</h3>
+            <p>Jl. Raya Doro Kabupaten Pekalongan 51191 Telp: (0285) 4484179 Email: smp1doro1980@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="judul-halaman">
+        Pengumuman Kelulusan Siswa Kelas 9<br>
+        Tahun Pelajaran 2025/2026
+    </div>
+
+    <div class="form-akses">
+        <label for="nisInput">Masukkan Nomor Induk Siswa (NIS):</label>
+        <input type="text" id="nisInput" placeholder="Contoh: 9101" autocomplete="off">
+        <button onclick="cekKelulusan()">Cek Hasil</button>
+    </div>
+
+    <div id="errorPesan" class="error-pesan">NIS tidak ditemukan. Silakan periksa kembali nomor yang Anda masukkan atau hubungi pihak sekolah.</div>
+
+    <div id="hasilBox" class="Hasil-box">
+        <table class="tabel-data">
+            <tr>
+                <td>No. Urut</td>
+                <td><span id="txtNoUrut"></span></td>
+            </tr>
+            <tr>
+                <td>Nama Siswa</td>
+                <td><span id="txtNama"></span></td>
+            </tr>
+            <tr>
+                <td>NIS</td>
+                <td><span id="txtNis"></span></td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td><span id="txtKelas"></span></td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td><span id="txtTtl"></span></td>
+            </tr>
+            <tr>
+                <td>Keterangan</td>
+                <td><span id="txtKeterangan"></span></td>
+            </tr>
+        </table>
+
+        <div class="tanggal-ttd">
+            Doro, 2 Juni 2026<br>
+            Kepala Sekolah,
+            <br><br><br><br>
+            <strong>SMP Negeri 1 Doro</strong>
+        </div>
+    </div>
+</div>
+
+<script>
+    // DATA SELURUH 193 SISWA YANG SUDAH DIMUAT DAN DIKUNCI MATI (100% AMAN DARI ERROR BROWSER)
+    const dataSiswa = [
+        { noUrut: "1", nama: "AHMAD SHAFI PUTRA ARNAS", nis: "9101", kelas: "IX A", ttl: "Pekalongan, 23 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "2", nama: "AISYAH FIONNA ATHALIA", nis: "9104", kelas: "IX A", ttl: "Pekalongan, 20 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "3", nama: "AKHMAD YUNUS", nis: "9106", kelas: "IX A", ttl: "Pekalongan, 06 Juni 2009", keterangan: "LULUS" },
+        { noUrut: "4", nama: "ANINDYA TIAS FEBRIANI", nis: "9111", kelas: "IX A", ttl: "Pekalongan, 10 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "5", nama: "ARSYA ISMATUL HAWA", nis: "9118", kelas: "IX A", ttl: "Pekalongan, 21 September 2010", keterangan: "LULUS" },
+        { noUrut: "6", nama: "ASYFA NAYA RAMADHANI", nis: "9122", kelas: "IX A", ttl: "Pekalongan, 19 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "7", nama: "AZIZA SEPTYA RAHAJA", nis: "9127", kelas: "IX A", ttl: "Pekalongan, 05 Juni 2012", keterangan: "LULUS" },
+        { noUrut: "8", nama: "BACHTIAR GALIH IRFANDANI", nis: "9129", kelas: "IX A", ttl: "Pekalongan, 30 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "9", nama: "BELGI EMILDA GERTI PRATAMA", nis: "9132", kelas: "IX A", ttl: "Pekalongan, 29 Oktober 2009", keterangan: "LULUS" },
+        { noUrut: "10", nama: "DELA PUTRI ALFIANI", nis: "9139", kelas: "IX A", ttl: "Pekalongan, 08 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "11", nama: "DITA AYU APRILIA", nis: "9145", kelas: "IX A", ttl: "Pekalongan, 03 April 2011", keterangan: "LULUS" },
+        { noUrut: "12", nama: "DWI RIFKI ADITIA", nis: "9148", kelas: "IX A", ttl: "Pekalongan, 31 Mei 2010", keterangan: "LULUS" },
+        { noUrut: "13", nama: "GALANG ERLANGGA", nis: "9167", kelas: "IX A", ttl: "Pekalongan, 09 Januari 2010", keterangan: "LULUS" },
+        { noUrut: "14", nama: "HASNA SEKAR YULIA", nis: "9177", kelas: "IX A", ttl: "Pekalongan, 26 Juli 2010", keterangan: "LULUS" },
+        { noUrut: "15", nama: "INDI NABILA", nis: "9183", kelas: "IX A", ttl: "Pekalongan, 24 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "16", nama: "KHUSNA ARLINTA RAMADHANI", nis: "9191", kelas: "IX A", ttl: "Pekalongan, 01 September 2010", keterangan: "LULUS" },
+        { noUrut: "17", nama: "LAELI AYU WULANDARI", nis: "9192", kelas: "IX A", ttl: "Pekalongan, 14 Oktober 2011", keterangan: "LULUS" },
+        { noUrut: "18", nama: "M. FAKHRI AKBARRUDIN", nis: "9196", kelas: "IX A", ttl: "Pekalongan, 12 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "19", nama: "MIFTAH FARIZ", nis: "9205", kelas: "IX A", ttl: "Pekalongan, 07 Juni 2010", keterangan: "LULUS" },
+        { noUrut: "20", nama: "MOH DWI ALDI FEBRIANSYAH", nis: "9120", kelas: "IX A", ttl: "Pekalongan, 31 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "21", nama: "MOHAMMAD AGUS NAZIL RIYADI", nis: "9209", kelas: "IX A", ttl: "Pekalongan, 30 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "22", nama: "MUHAMMAD FAIZ KURNIAWAN", nis: "9218", kelas: "IX A", ttl: "Pekalongan, 18 Desember 2009", keterangan: "LULUS" },
+        { noUrut: "23", nama: "MUHAMMAD FEBRI MAULANA", nis: "9219", kelas: "IX A", ttl: "Pekalongan, 05 Februai 2010", keterangan: "LULUS" },
+        { noUrut: "24", nama: "MUHAMMAD IBNU ABID", nis: "9220", kelas: "IX A", ttl: "Pekalongan, 19 Juli 2010", keterangan: "LULUS" },
+        { noUrut: "25", nama: "MUHAMMAD REZZA WAHYU APRIYANTO", nis: "9231", kelas: "IX a", ttl: "Pekalongan, 10 April 2010", keterangan: "LULUS" },
+        { noUrut: "26", nama: "NAZIRA ALKA RIZA", nis: "9247", kelas: "IX a", ttl: "Pekalongan, 04 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "27", nama: "NISA ALIFIA FADHILAH", nis: "9250", kelas: "IX A", ttl: "Pekalongan, 22 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "28", nama: "NUR LAYLI", nis: "9253", kelas: "IX A", ttl: "Pekalongan, 08 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "29", nama: "RIFQI MAJID DARMAWAN", nis: "9264", kelas: "IX A", ttl: "Pekalongan, 13 Agustus 2010", keterangan: "LULUS" },
+        { noUrut: "30", nama: "SABRINA AULIA", nis: "9267", kelas: "IX A", ttl: "Pekalongan, 16 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "31", nama: "SABRINA SALWA AGATHA", nis: "9268", kelas: "IX A", ttl: "Pekalongan, 22 Oktober 2010", keterangan: "LULUS" },
+        { noUrut: "32", nama: "ZAENA ZUHROTUN NISA", nis: "9296", kelas: "IX A", ttl: "Pekalongan, 20 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "33", nama: "DELIA PUTRI ANASTASYA", nis: "9095", kelas: "IX B", ttl: "Pekalongan, 15 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "34", nama: "AFRILIA DWI AZAHRA", nis: "9098", kelas: "IX B", ttl: "Pekalongan, 23 Apreil 2011", keterangan: "LULUS" },
+        { noUrut: "35", nama: "AHMAD YAZIR MULYANI", nis: "9102", kelas: "IX B", ttl: "Pekalongan, 06 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "36", nama: "ARGA RIZKI JULIAWAN", nis: "9116", kelas: "IX B", ttl: "Pekalongan, 06 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "37", nama: "AURA TAHLIA CITRA", nis: "9123", kelas: "IX B", ttl: "Pekalongan, 19 Oktober2010", keterangan: "LULUS" },
+        { noUrut: "38", nama: "AZRIKKA DAFA YANIZAR MALIK", nis: "9128", kelas: "IX B", ttl: "Pekalongan, 24 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "39", nama: "DAYU PUJI LESTARI", nis: "9138", kelas: "IX B", ttl: "Pekalongan, 30 Juli 2010", keterangan: "LULUS" },
+        { noUrut: "40", nama: "DESTA GALIH PRASETYO", nis: "9141", kelas: "IX B", ttl: "Pekalongan, 31 Desember 2009", keterangan: "LULUS" },
+        { noUrut: "41", nama: "DINA DWI NURBAETY", nis: "9144", kelas: "IX B", ttl: "Pekalongan, 08 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "42", nama: "EVA AGUSTINA RAMADANI", nis: "9152", kelas: "IX B", ttl: "Pekalongan, 20 Agustus 2010", keterangan: "LULUS" },
+        { noUrut: "43", nama: "FIRZA MAULANA PUTRA", nis: "9161", kelas: "IX B", ttl: "Pekalongan, 28 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "44", nama: "GINANDA DYAS AURELLIA", nis: "9171", kelas: "IX B", ttl: "Pekalongan, 30 September 2010", keterangan: "LULUS" },
+        { noUrut: "45", nama: "IFBAL NURAFIT", nis: "9180", kelas: "IX B", ttl: "Pekalongan, 08 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "46", nama: "MUHAMMAD AMIQUL FAHMI", nis: "9213", kelas: "IX B", ttl: "Pekalongan, 05 April 2011", keterangan: "LULUS" },
+        { noUrut: "47", nama: "MUHAMMAD BANI ABSHAR", nis: "9215", kelas: "IX B", ttl: "Pekalongan, 10 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "48", nama: "MUHAMMAD DENIZ OKY VALENTINO", nis: "9217", kelas: "IX B", ttl: "Pekalongan, 10 September 2011", keterangan: "LULUS" },
+        { noUrut: "49", nama: "MUHAMMAD PRASTYO OKTA ARFIANSYAH", nis: "9227", kelas: "IX B", ttl: "Pekalongan, 02 Oktober 2010", keterangan: "LULUS" },
+        { noUrut: "50", nama: "MUHAMMAD RAFI MAHESA ADIPRAMANA", nis: "9228", kelas: "IX B", ttl: "Pekalongan, 29 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "51", nama: "NADIA KIFAYA", nis: "9237", kelas: "IX B", ttl: "Pekalongan, 26 Januari 2009", keterangan: "LULUS" },
+        { noUrut: "52", nama: "NAFISYA ADELIA RACHMA", nis: "9239", kelas: "IX B", ttl: "Pekalongan, 25 November 2010", keterangan: "LULUS" },
+        { noUrut: "53", nama: "NISSA AL KHAIRIYYAH", nis: "9251", kelas: "IX B", ttl: "Pekalongan, 22 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "54", nama: "NOVITA ANGGRAENI", nis: "9252", kelas: "IX B", ttl: "Pekalongan, 23 November2011", keterangan: "LULUS" },
+        { noUrut: "55", nama: "PUTRI AISYAH", nis: "9256", kelas: "IX A", ttl: "Pekalongan, 17 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "56", nama: "RAFA SEBASTIAN PRATAMA", nis: "9259", kelas: "IX B", ttl: "Pekalongan, 02 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "57", nama: "REVANA DELLA SEPTIANA", nis: "9262", kelas: "IX B", ttl: "Pekalongan, 22 November 2010", keterangan: "LULUS" },
+        { noUrut: "58", nama: "SAPTONO PUTRA RAMADHANI", nis: "9274", kelas: "IX B", ttl: "Pekalongan, 08 September 2010", keterangan: "LULUS" },
+        { noUrut: "59", nama: "SYIFA AULIA", nis: "9282", kelas: "IX B", ttl: "Pekalongan, 15 September 2011", keterangan: "LULUS" },
+        { noUrut: "60", nama: "VINA CAHAYA DIRGAINA", nis: "9286", kelas: "IX B", ttl: "Pekalongan, 17 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "61", nama: "WAHYU ARIEF HIDAYAT", nis: "9288", kelas: "IX B", ttl: "Pekalongan, 30 April 2011", keterangan: "LULUS" },
+        { noUrut: "62", nama: "WINDI JULIYATUSYA,BANIYAH", nis: "9292", kelas: "IX B", ttl: "Pekalongan, 08 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "63", nama: "YUNITA ISMATUL KHILMI", nis: "9294", kelas: "IX B", ttl: "Pekalongan, 10 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "64", nama: "AHMAD FADHLI ROBBANI", nis: "9100", kelas: "IX C", ttl: "Pekalongan, 14 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "65", nama: "ANNISA FATICKHA PUTRI", nis: "9113", kelas: "IX C", ttl: "Pekalongan, 29 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "66", nama: "ARTIKA SEPTIYANI", nis: "9119", kelas: "IX C", ttl: "Pekalongan, 09 September 2009", keterangan: "LULUS" },
+        { noUrut: "67", nama: "BADIUZZAMAN SALIM", nis: "9130", kelas: "IX C", ttl: "Pekalongan, 20 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "68", nama: "BUNGA MELATI", nis: "9133", kelas: "IX C", ttl: "Pekalongan, 15 April 2010", keterangan: "LULUS" },
+        { noUrut: "69", nama: "DEVI AULIA", nis: "9142", kelas: "IX C", ttl: "Pekalongan, 28 Oktober2010", keterangan: "LULUS" },
+        { noUrut: "70", nama: "DEWI ANGGORO WATI", nis: "9143", kelas: "IX C", ttl: "Pekalongan, 05 Juni 2010", keterangan: "LULUS" },
+        { noUrut: "71", nama: "EGA RIZQI RAMMADHAN", nis: "9150", kelas: "IX C", ttl: "Pekalongan, 10 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "72", nama: "ETI DWI SAFITRI", nis: "9151", kelas: "IX C", ttl: "Pekalongan, 10 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "73", nama: "FARRA AMELIA ADHESTY", nis: "9156", kelas: "IX C", ttl: "Pekalongan, 06 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "74", nama: "FATAN SYEFANA AZIS", nis: "9157", kelas: "IX C", ttl: "Pekalongan, 10 April 2011", keterangan: "LULUS" },
+        { noUrut: "75", nama: "FATKHUR ROHMAN", nis: "9158", kelas: "IX C", ttl: "Pekalongan, 28 April 2011", keterangan: "LULUS" },
+        { noUrut: "76", nama: "FEBIANSYAH ALBAIS", nis: "99160", kelas: "IX C", ttl: "Pekalongan, 02 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "77", nama: "GAADIS RIZKY APRILIA", nis: "9166", kelas: "IX C", ttl: "Pekalongan, 26 April 2011", keterangan: "LULUS" },
+        { noUrut: "78", nama: "HANA ISMATUL MAULA", nis: "9175", kelas: "IX C", ttl: "Bekasi, 26 September 2011", keterangan: "LULUS" },
+        { noUrut: "79", nama: "IBNU ERWIN RIZQULLAH", nis: "9179", kelas: "IX C", ttl: "Pekalongan, 30 Januri 2011", keterangan: "LULUS" },
+        { noUrut: "80", nama: "IRSYAD RADITYA SAPUTRA", nis: "9185", kelas: "IX C", ttl: "Pekalongan, 28 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "81", nama: "JAVA PRATAMA SUHADA", nis: "9186", kelas: "IX C", ttl: "Pekalongan, 26 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "82", nama: "LUSIANA SAFARA", nis: "9194", kelas: "IX C", ttl: "Pekalongan, 22 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "83", nama: "M. AZKA RAMADANI", nis: "9195", kelas: "IX C", ttl: "Pekalongan, 11 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "84", nama: "M, GALIH PANGESTU", nis: "9198", kelas: "IX C", ttl: "Pekalongan, 12 Desember 2008", keterangan: "LULUS" },
+        { noUrut: "85", nama: "M. KHOIRUL ADNAN", nis: "9200", kelas: "IX C", ttl: "Pekalongan, 14 Desember 2009", keterangan: "LULUS" },
+        { noUrut: "86", nama: "MUHAMMAD DAVID PRATAMA", nis: "9216", kelas: "IX C", ttl: "Pekalongan, 8 September 2010", keterangan: "LULUS" },
+        { noUrut: "87", nama: "NADIA QOTHRUN NADA", nis: "9238", kelas: "IX C", ttl: "Pekalongan, 10 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "88", nama: "NAVA ANGGRAINI", nis: "9245", kelas: "IX C", ttl: "Pekalongan, 28 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "89", nama: "NAZILA ROHMAH", nis: "9246", kelas: "IX C", ttl: "Pekalongan, 19 Oktober 2011", keterangan: "LULUS" },
+        { noUrut: "90", nama: "RESTI NUR FAIZAH", nis: "9260", kelas: "IX C", ttl: "Pekalongan, 21 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "91", nama: "SAIFUL BAHRI", nis: "9270", kelas: "IX C", ttl: "Pekalongan, 20 Februari 2010", keterangan: "LULUS" },
+        { noUrut: "92", nama: "SALMA NATHANIELA ROSYADAH", nis: "9271", kelas: "IX C", ttl: "Pekalongan, 09 November 2010", keterangan: "LULUS" },
+        { noUrut: "93", nama: "SHAFIRA PUTRI QIRANI", nis: "9298", kelas: "IX C", ttl: "Pekalongan, 27 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "94", nama: "SUCI AMELIA", nis: "9280", kelas: "IX C", ttl: "Pekalongan, 07 September 2009", keterangan: "LULUS" },
+        { noUrut: "95", nama: "VANYA EXCEL RAMDHANI", nis: "9284", kelas: "IX C", ttl: "Pekalongan, 02 September2010", keterangan: "LULUS" },
+        { noUrut: "96", nama: "AFIFAH NAILA HUSNA", nis: "9097", kelas: "IX D", ttl: "Pekalongan, 19 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "97", nama: "AHMAD ZAKI ALFIKRI", nis: "9103", kelas: "IX D", ttl: "Pekalongan, 28 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "98", nama: "ALWIAH FEBRIANTI", nis: "9097", kelas: "IX D", ttl: "Pekalongan, 02 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "99", nama: "AYU SETYOWATI", nis: "9124", kelas: "IX D", ttl: "Pekalongan, 09 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "100", nama: "CLARISTA ANDHITA NUZULA", nis: "9134", kelas: "IX D", ttl: "Pekalongan, 04 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "101", nama: "EGA ADHANI RIZKIKA", nis: "9149", kelas: "IX D", ttl: "Pekalongan, 12 November 2010", keterangan: "LULUS" },
+        { noUrut: "102", nama: "EVA FEBIYANTI", nis: "9153", kelas: "IX D", ttl: "Pekalongan, 05 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "103", nama: "FADDHLURRUDIN WAFIIANDIRA", nis: "9155", kelas: "IX D", ttl: "Pekalongan, 08 Oktober 2010", keterangan: "LULUS" },
+        { noUrut: "104", nama: "FITA ADELIA", nis: "9162", kelas: "IX D", ttl: "Pekalongan, 10 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "105", nama: "FITRI SEPTIANDITA", nis: "9163", kelas: "IX D", ttl: "Pekalongan, 01 September 2011", keterangan: "LULUS" },
+        { noUrut: "106", nama: "GEVALDO AUFA NANDA", nis: "9169", kelas: "IX D", ttl: "Pekalongan, 05 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "107", nama: "HAFIZAH", nis: "9173", kelas: "IX D", ttl: "Pekalongan, 05 April 2011", keterangan: "LULUS" },
+        { noUrut: "108", nama: "HANA HUSNAENI", nis: "9174", kelas: "IX D", ttl: "Pekalongan, 26 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "109", nama: "HISYAM TOBIBHI", nis: "9178", kelas: "IX D", ttl: "Pekalongan, 04 November 2010", keterangan: "LULUS" },
+        { noUrut: "110", nama: "IIS AFRIANI", nis: "9181", kelas: "IX D", ttl: "Pekalongan, 02 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "111", nama: "KHASNAH APRILIANI", nis: "9190", kelas: "IX D", ttl: "Pekalongan, 30 April 2011", keterangan: "LULUS" },
+        { noUrut: "112", nama: "M FAKHRU ZAMAN", nis: "9197", kelas: "IX D", ttl: "Pekalongan, 15 November 2010", keterangan: "LULUS" },
+        { noUrut: "113", nama: "M. RIZQI RAMADHANI", nis: "9202", kelas: "IX D", ttl: "Pekalongan, 30 Agustus2011", keterangan: "LULUS" },
+        { noUrut: "114", nama: "MIYSEL IKA SAHFA AMELIA", nis: "92078", kelas: "IX D", ttl: "Pekalongan, 05 November 2010", keterangan: "LULUS" },
+        { noUrut: "115", nama: "MUHAMMAD DIKI FAKHRUDIN", nis: "9211", kelas: "IX D", ttl: "Pekalongan, 06 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "116", nama: "MUHAMMAD KHALIS DZAKA", nis: "9221", kelas: "IX D", ttl: "Pekalongan, 30 November 2010", keterangan: "LULUS" },
+        { noUrut: "117", nama: "MUHAMMAD SAUFA YUHDA", nis: "9234", kelas: "IX D", ttl: "Pekalongan, 18 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "118", nama: "NABILA ADELIA PUTRI", nis: "9235", kelas: "IX D", ttl: "Pekalongan, 23 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "119", nama: "NATAZA FEBRIANI", nis: "9244", kelas: "IX D", ttl: "Pekalongan, 03 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "120", nama: "QOTRUN NADA HABIBAH", nis: "9257", kelas: "IX D", ttl: "Pekalongan, 20 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "121", nama: "RAFA DWI SAPUTRO", nis: "9258", kelas: "IX D", ttl: "Pekalongan, 18 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "122", nama: "SALWA KHAIRUNNISA", nis: "9222", kelas: "IX D", ttl: "Pekalongan, 31 Desember 2009", keterangan: "LULUS" },
+        { noUrut: "123", nama: "SYAHLA RARA ANDINI", nis: "9281", kelas: "IX D", ttl: "Pekalongan, 20 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "124", nama: "TRISASI RAEMADHANI", nis: "9283", kelas: "IX D", ttl: "Pekalongan, 10 Agustus 2010", keterangan: "LULUS" },
+        { noUrut: "125", nama: "WAHYU KRISMANTO", nis: "9289", kelas: "IX D", ttl: "Pekalongan, 22 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "126", nama: "YUSUF DARMAWAN", nis: "9295", kelas: "IX D", ttl: "Pekalongan, 03 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "127", nama: "AFA DWI OKTAFIANA", nis: "9096", kelas: "IX E", ttl: "Pekalongan, 02 Oktober 2010", keterangan: "LULUS" },
+        { noUrut: "128", nama: "AQEELA RAISHA RAMADANI", nis: "9115", kelas: "IX E", ttl: "Pekalongan, 06 September 2010", keterangan: "LULUS" },
+        { noUrut: "129", nama: "ARKAN WIMA SAHITYA", nis: "9177", kelas: "IX E", ttl: "Pekalongan, 08 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "130", nama: "AZASM MUSOFA", nis: "9125", kelas: "IX E", ttl: "Pekalongan, 24 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "131", nama: "BAYU ERWAN PRATAMA", nis: "9131", kelas: "IX E", ttl: "Pekalongan, 16 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "132", nama: "DAFFI WILDAN ARBIFIL", nis: "9135", kelas: "IX E", ttl: "Pekalongan, 07 November 2011", keterangan: "LULUS" },
+        { noUrut: "133", nama: "DARMA LESTARI", nis: "9136", kelas: "IX E", ttl: "Pekalongan, 09 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "134", nama: "DAVID MIRZA AHYA", nis: "9137", kelas: "IX E", ttl: "Pekalongan, 19 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "135", nama: "DWI AJENG INDIRA", nis: "9146", kelas: "IX E", ttl: "Pekalongan, 09 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "136", nama: "DWI NOVITA RAHMA", nis: "9147", kelas: "IX E", ttl: "Pekalongan, 19 November 2010", keterangan: "LULUS" },
+        { noUrut: "137", nama: "GARUDA HANGGA PANGIBAR", nis: "9168", kelas: "IX E", ttl: "Pekalongan, 20 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "138", nama: "GHIFFARI FARRAS AFNAF", nis: "9170", kelas: "IX E", ttl: "Pekalongan, 21 September 2010", keterangan: "LULUS" },
+        { noUrut: "139", nama: "IRFAN ARDIANSHAH", nis: "9184", kelas: "IX E", ttl: "Pekalongan, 07 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "140", nama: "KHAIRUL ANAM ANISHABIRIN", nis: "9189", kelas: "IX E", ttl: "Pekalongan, 12 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "141", nama: "LINGGA RIBY VIRGIANTI", nis: "9193", kelas: "IX E", ttl: "Pekalongan, 10 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "142", nama: "M. NANDA ADHIYAKSA SETIAWAN", nis: "9201", kelas: "IX E", ttl: "Pekalongan, 22 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "143", nama: "MEGA AULIYA NINGSIH", nis: "9203", kelas: "IX E", ttl: "Pekalongan, 04 November 2010", keterangan: "LULUS" },
+        { noUrut: "144", nama: "MUHAMMAD ASYAM ALFATHIIN", nis: "9214", kelas: "IX E", ttl: "Tangerang, 10 Oktober 2010", keterangan: "LULUS" },
+        { noUrut: "145", nama: "MUHAMMAD NAZAR ALFAHREZI ", nis: "9224", kelas: "IX E", ttl: "Pekalongan, 12 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "146", nama: "MUHAMMAD SABILURROSYAD", nis: "9233", kelas: "IX E", ttl: "Pekalongan, 14 Januari 2010", keterangan: "LULUS" },
+        { noUrut: "147", nama: "NABILA RAMADHANI", nis: "9236", kelas: "IX E", ttl: "Pekalongan, 01 Agustus 2011", keterangan: "LULUS" },
+        { noUrut: "148", nama: "NAJMI HAYATUNNUFUS", nis: "9242", kelas: "IX E", ttl: "Pekalongan, 21 April 2011", keterangan: "LULUS" },
+        { noUrut: "149", nama: "NINDY NAYRISKA PUTRI", nis: "9249", kelas: "IX E", ttl: "Pekalongan, 10 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "150", nama: "PARIS KEJORA FILOSA", nis: "9254", kelas: "IX E", ttl: "Pekalongan, 09 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "151", nama: "RIZQI ZUKHRUFILA", nis: "9265", kelas: "IX E", ttl: "Pekalongan, 16 April 2011", keterangan: "LULUS" },
+        { noUrut: "152", nama: "RIZQILLA NAUFAL SYAFI DANIS", nis: "9266", kelas: "IX E", ttl: "Pekalongan, 17 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "153", nama: "SAFA AMALIA", nis: "9269", kelas: "IX E", ttl: "Pekalongan, 15 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "154", nama: "SALSABILA RAVA ZAHIRAH", nis: "9272", kelas: "IX E", ttl: "Pekalongan, 25 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "155", nama: "SERLY AULIA PUTRI", nis: "9277", kelas: "IX E", ttl: "Pekalongan, 08 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "156", nama: "SHELVIANA PUTRI", nis: "9278", kelas: "IX E", ttl: "Pekalongan, 27 Januari 2011", keterangan: "LULUS" },
+        { noUrut: "157", nama: "VELLITA ASTY ASHANTI", nis: "9288", kelas: "IX E", ttl: "Pekalongan, 01 April 2011", keterangan: "LULUS" },
+        { noUrut: "158", nama: "ZAKI ALFI FAHREZA", nis: "9297", kelas: "IX E", ttl: "Pekalongan, 02 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "159", nama: "AGNIA ZAHRA", nis: "9099", kelas: "IX F", ttl: "Pekalongan, 18 Maret 2012", keterangan: "LULUS" },
+        { noUrut: "160", nama: "AKHMAD UBAIDILAH AN NUR", nis: "9105", kelas: "IX F", ttl: "Pekalongan, 13 November 2010", keterangan: "LULUS" },
+        { noUrut: "161", nama: "ANEIRA MARTA ARTANTI", nis: "9109", kelas: "IX F", ttl: "Pekalongan, 03 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "162", nama: "ANGGUN ERLITA ANGGRAINI", nis: "9110", kelas: "IX F", ttl: "Pekalongan, 08 April 2011", keterangan: "LULUS" },
+        { noUrut: "163", nama: "ANISA FITRI", nis: "9112", kelas: "IXF", ttl: "Pekalongan, 25 September 2010", keterangan: "LULUS" },
+        { noUrut: "164", nama: "ARUM ZULFIANI FAYZA", nis: "9120", kelas: "IX F", ttl: "Pekalongan, 20 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "165", nama: "AZI FRIYANTO", nis: "9126", kelas: "IX F", ttl: "Pekalongan, 25 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "166", nama: "EVITA FEBRIANI", nis: "9154", kelas: "IX F", ttl: "Pekalongan, 05 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "167", nama: "FEBI SAKINATUL SABILA", nis: "9159", kelas: "IX F", ttl: "Pekalongan, 23 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "168", nama: "FITROTUL AFIDAH", nis: "9164", kelas: "IX F", ttl: "Pekalongan, 18 Juni 2011", keterangan: "LULUS" },
+        { noUrut: "169", nama: "FRIZKO MAYZA DINATA", nis: "9165", kelas: "IX F", ttl: "Pekalongan, 20 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "170", nama: "GUNAWAN WIBISONO", nis: "9172", kelas: "IX F", ttl: "Pekalongan, 22 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "171", nama: "HANYDAR RISYA AZAYAIKA", nis: "9176", kelas: "IX F", ttl: "Pekalongan, 27 Juli 2010", keterangan: "LULUS" },
+        { noUrut: "172", nama: "IMELDA SEMA PISCESA", nis: "9182", kelas: "IX F", ttl: "Pekalongan, 14 Maret 2011", keterangan: "LULUS" },
+        { noUrut: "173", nama: "JEZZY ANGGRAENI", nis: "9187", kelas: "IX F", ttl: "Pekalongan, 07 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "174", nama: "KHAIRA ANESTASYA PUTRI FELICIA", nis: "9188", kelas: "IX F", ttl: "Pekalongan, 12 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "175", nama: "M. KHILMI SYAFI", nis: "9199", kelas: "IX F", ttl: "Pekalongan, 25 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "176", nama: "MILADUM SINTA", nis: "9206", kelas: "IX F", ttl: "Pekalongan, 30 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "177", nama: "MOHAMMAD DANI RISKI", nis: "9210", kelas: "IX F", ttl: "Pekalongan, 12 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "178", nama: "MUHAMAD MUTORIQ ARIFIN", nis: "9212", kelas: "IX F", ttl: "Pekalongan, 27 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "179", nama: "MUHAMMAD KHOIRUL AJIS", nis: "9222", kelas: "IX F", ttl: "Pekalongan, 09 April 2011", keterangan: "LULUS" },
+        { noUrut: "180", nama: "MUHAMMAD MAMBA'UL ULUM", nis: "9223", kelas: "IX F", ttl: "Pekalongan, 22 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "181", nama: "MUHAMMAD NIZAM MUQOROBIN", nis: "9225", kelas: "IX F", ttl: "Pekalongan, 28 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "182", nama: "MUHAMMAD NIZAR", nis: "9226", kelas: "IX F", ttl: "Pekalongan, 07 Maret2010", keterangan: "LULUS" },
+        { noUrut: "183", nama: "MUHAMMAD RAGIL", nis: "9229", kelas: "IX F", ttl: "Pekalongan, 01 Agustus 2010", keterangan: "LULUS" },
+        { noUrut: "184", nama: "MUHAMMAD REVAN FEBIANSYAH", nis: "9230", kelas: "IX F", ttl: "Pekalongan, 03 Februari 2011", keterangan: "LULUS" },
+        { noUrut: "185", nama: "NAILY IZZA APRILIA", nis: "9241", kelas: "IX F", ttl: "Pekalongan, 03 April 2011", keterangan: "LULUS" },
+        { noUrut: "186", nama: "NATASHA DINDA OLIVIA", nis: "9243", kelas: "IX F", ttl: "Pekalongan, 21 Juli 2011", keterangan: "LULUS" },
+        { noUrut: "187", nama: "NAZLA MEISYA NABILA", nis: "9248", kelas: "IX F", ttl: "Pekalongan, 30 Mei 2011", keterangan: "LULUS" },
+        { noUrut: "188", nama: "RIFKY MAULIDA AZKA", nis: "9288", kelas: "IX F", ttl: "Pekalongan, 04 September 2010", keterangan: "LULUS" },
+        { noUrut: "189", nama: "SEPTIANA SAFARA", nis: "9276", kelas: "IX F", ttl: "Pekalongan, 17 September 2011", keterangan: "LULUS" },
+        { noUrut: "190", nama: "SITI YASMIN MUMTAZA", nis: "9279", kelas: "IX F", ttl: "Pekalongan, 27 Desember 2010", keterangan: "LULUS" },
+        { noUrut: "191", nama: "VINO ALGHOZALI", nis: "9287", kelas: "IX F", ttl: "Pekalongan, 04 Agustus 2009", keterangan: "LULUS" },
+        { noUrut: "192", nama: "WIDIA MEKA OKTAVIA", nis: "9290", kelas: "IX F", ttl: "Pekalongan, 08 Oktober 2011", keterangan: "LULUS" },
+        { noUrut: "193", nama: "WULAN JULIYANTI", nis: "9293", kelas: "IX F", ttl: "Pekalongan, 23 Juli 2011", keterangan: "LULUS" }
+    ];
+
+    function cekKelulusan() {
+        const inputNis = document.getElementById('nisInput').value.trim();
+        const hasilBox = document.getElementById('hasilBox');
+        const errorPesan = document.getElementById('errorPesan');
+
+        hasilBox.style.display = 'none';
+        errorPesan.style.display = 'none';
+
+        if (inputNis === "") {
+            alert("Silakan masukkan NIS terlebih dahulu!");
+            return;
+        }
+
+        // Cari siswa berdasarkan kecocokan NIS dari database terkunci di atas
+        const siswa = dataSiswa.find(s => s.nis === inputNis);
+
+        if (siswa) {
+            document.getElementById('txtNoUrut').innerText = siswa.noUrut;
+            document.getElementById('txtNama').innerText = siswa.nama;
+            document.getElementById('txtNis').innerText = siswa.nis;
+            document.getElementById('txtKelas').innerText = siswa.kelas;
+            document.getElementById('txtTtl').innerText = siswa.ttl;
+            
+            const ketElement = document.getElementById('txtKeterangan');
+            ketElement.innerText = siswa.keterangan;
+
+            if (siswa.keterangan.toUpperCase() === "LULUS") {
+                ketElement.className = "status-badge status-lulus";
+                hasilBox.style.display = 'block';
+                efekPetasanKertas();
+            } else {
+                ketElement.className = "status-badge status-tidak";
+                hasilBox.style.display = 'block';
+            }
+        } else {
+            errorPesan.style.display = 'block';
+        }
+    }
+
+    function efekPetasanKertas() {
+        var duration = 3 * 1000;
+        var end = Date.now() + duration;
+
+        (function frame() {
+            confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0, y: 0.8 } });
+            confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1, y: 0.8 } });
+            if (Date.now() < end) { requestAnimationFrame(frame); }
+        }());
+    }
+</script>
+
+</body>
+</html>
